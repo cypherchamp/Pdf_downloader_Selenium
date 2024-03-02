@@ -1,0 +1,76 @@
+{
+  "id": "9799d284-ca6c-4ec4-9441-8703a907b363",
+  "version": "2.0",
+  "name": "pdf_downloader",
+  "url": "https://dfpd.gov.in",
+  "tests": [{
+    "id": "1d0634a7-d4b5-4f57-b809-653806b86fed",
+    "name": "pdfDownload",
+    "commands": [{
+      "id": "125d344c-7d64-44f3-bba9-5b61984b1de3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ad2e4d2-b0a1-438c-9115-924fe2c25543",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78fdead7-ca11-423b-a244-a64349afc3b8",
+      "comment": "",
+      "command": "click",
+      "target": "//li[@class='has-sub']//a[contains(text(),'Reports')]",
+      "targets": [
+        ["linkText=Reports", "linkText"],
+        ["css=#top_menu_parent > .has-sub:nth-child(7) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Reports')]", "xpath:link"],
+        ["xpath=//ul[@id='top_menu_parent']/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/DocumentReport?language=1')]", "xpath:href"],
+        ["xpath=//nav/div/div/ul/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Reports')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e9bbeb8-b436-40f4-a60e-99c1f4658cf4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//img[@title='download']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "5d1c59ce-f292-4040-b479-3e31611d7b2e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[@title='download']",
+      "targets": [
+        ["css=.odd:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@title='download']", "xpath:img"],
+        ["xpath=//table[@id='dataTable']/tbody/tr/td[3]/a/img", "xpath:idRelative"],
+        ["xpath=//td[3]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ab24a97-115a-4628-be99-4a494b70f761",
+      "comment": "",
+      "command": "pause",
+      "target": "10000",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "43316401-02b8-49b1-92ae-bdf5715df5c5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1d0634a7-d4b5-4f57-b809-653806b86fed"]
+  }],
+  "urls": ["https://dfpd.gov.in/"],
+  "plugins": []
+}
